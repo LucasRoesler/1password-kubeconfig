@@ -6,6 +6,16 @@ A tool for managing your kubeconfig and delegating authentication to 1Password.
 This leverages the built-in `exec` capability of the kubeconfig file to run the 1password CLI and authenticate with the Kubernetes cluster.
 See https://kubernetes.io/docs/reference/access-authn-authz/authentication/#client-go-credential-plugins for more information.
 
+## Installation
+
+The tool requires both `kubectl` and `op` to be installed and available in your PATH. See https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/ and https://developer.1password.com/docs/cli/ respectively.
+
+The tool can be installed with `go`
+
+```sh
+go install github.com/LucasRoesler/1password-kubeconfig@latest
+```
+
 ## Usage
 
 The command is designed to manage the kubeconfig file and then delegate authentication to the 1password CLI, so has two main commands:
